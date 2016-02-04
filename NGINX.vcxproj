@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\nginx_original\src\event\modules\ngx_iocp_module.c" />
+    <ClCompile Include="..\nginx_original\src\event\modules\ngx_win32_select_module.c" />
+    <ClCompile Include="..\nginx_original\src\event\ngx_event.c" />
+    <ClCompile Include="..\nginx_original\src\event\ngx_event_accept.c" />
+    <ClCompile Include="..\nginx_original\src\event\ngx_event_connect.c" />
+    <ClCompile Include="..\nginx_original\src\event\ngx_event_pipe.c" />
+    <ClCompile Include="..\nginx_original\src\event\ngx_event_posted.c" />
+    <ClCompile Include="..\nginx_original\src\event\ngx_event_timer.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_copy_filter_module.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_core_module.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_file_cache.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_header_filter_module.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_parse.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_postpone_filter_module.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_request.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_request_body.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_script.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_special_response.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_upstream.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_upstream_round_robin.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_variables.c" />
+    <ClCompile Include="..\nginx_original\src\http\ngx_http_write_filter_module.c" />
+    <ClCompile Include="config\ngx_modules.c" />
+    <ClCompile Include="config\ngx_pch.c" />
+    <ClCompile Include="src\core\nginx.c" />
+    <ClCompile Include="src\core\ngx_array.c" />
+    <ClCompile Include="src\core\ngx_buf.c" />
+    <ClCompile Include="src\core\ngx_conf_file.c" />
+    <ClCompile Include="src\core\ngx_connection.c" />
+    <ClCompile Include="src\core\ngx_cpuinfo.c" />
+    <ClCompile Include="src\core\ngx_crc32.c" />
+    <ClCompile Include="src\core\ngx_crypt.c" />
+    <ClCompile Include="src\core\ngx_cycle.c" />
+    <ClCompile Include="src\core\ngx_file.c" />
+    <ClCompile Include="src\core\ngx_hash.c" />
+    <ClCompile Include="src\core\ngx_inet.c" />
+    <ClCompile Include="src\core\ngx_list.c" />
+    <ClCompile Include="src\core\ngx_log.c" />
+    <ClCompile Include="src\core\ngx_md5.c" />
+    <ClCompile Include="src\core\ngx_murmurhash.c" />
+    <ClCompile Include="src\core\ngx_open_file_cache.c" />
+    <ClCompile Include="src\core\ngx_output_chain.c" />
+    <ClCompile Include="src\core\ngx_palloc.c" />
+    <ClCompile Include="src\core\ngx_parse.c" />
+    <ClCompile Include="src\core\ngx_parse_time.c" />
+    <ClCompile Include="src\core\ngx_proxy_protocol.c" />
+    <ClCompile Include="src\core\ngx_queue.c" />
+    <ClCompile Include="src\core\ngx_radix_tree.c" />
+    <ClCompile Include="src\core\ngx_rbtree.c" />
+    <ClCompile Include="src\core\ngx_regex.c" />
+    <ClCompile Include="src\core\ngx_resolver.c" />
+    <ClCompile Include="src\core\ngx_rwlock.c" />
+    <ClCompile Include="src\core\ngx_shmtx.c" />
+    <ClCompile Include="src\core\ngx_slab.c" />
+    <ClCompile Include="src\core\ngx_spinlock.c" />
+    <ClCompile Include="src\core\ngx_string.c" />
+    <ClCompile Include="src\core\ngx_syslog.c" />
+    <ClCompile Include="src\core\ngx_times.c" />
+    <ClCompile Include="src\event\ngx_event_acceptex.c" />
+    <ClCompile Include="src\http\modules\ngx_http_access_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_auth_basic_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_autoindex_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_browser_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_charset_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_chunked_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_empty_gif_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_fastcgi_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_geo_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_gunzip_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_gzip_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_gzip_static_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_headers_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_index_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_limit_conn_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_limit_req_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_log_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_map_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_memcached_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_not_modified_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_proxy_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_random_index_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_range_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_referer_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_rewrite_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_scgi_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_split_clients_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_ssi_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_static_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_sub_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_upstream_hash_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_upstream_ip_hash_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_upstream_keepalive_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_upstream_least_conn_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_upstream_zone_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_userid_filter_module.c" />
+    <ClCompile Include="src\http\modules\ngx_http_uwsgi_module.c" />
+    <ClCompile Include="src\os\win32\ngx_alloc.c" />
+    <ClCompile Include="src\os\win32\ngx_errno.c" />
+    <ClCompile Include="src\os\win32\ngx_event_log.c" />
+    <ClCompile Include="src\os\win32\ngx_files.c" />
+    <ClCompile Include="src\os\win32\ngx_process.c" />
+    <ClCompile Include="src\os\win32\ngx_process_cycle.c" />
+    <ClCompile Include="src\os\win32\ngx_shmem.c" />
+    <ClCompile Include="src\os\win32\ngx_socket.c" />
+    <ClCompile Include="src\os\win32\ngx_stat.c" />
+    <ClCompile Include="src\os\win32\ngx_thread.c" />
+    <ClCompile Include="src\os\win32\ngx_time.c" />
+    <ClCompile Include="src\os\win32\ngx_udp_wsarecv.c" />
+    <ClCompile Include="src\os\win32\ngx_user.c" />
+    <ClCompile Include="src\os\win32\ngx_win32_init.c" />
+    <ClCompile Include="src\os\win32\ngx_wsarecv.c" />
+    <ClCompile Include="src\os\win32\ngx_wsarecv_chain.c" />
+    <ClCompile Include="src\os\win32\ngx_wsasend.c" />
+    <ClCompile Include="src\os\win32\ngx_wsasend_chain.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D18B976A-0569-4BEC-8A4A-FFBFF436E92D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NGINX</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath);$(MSBuildProjectDirectory)\config;$(MSBuildProjectDirectory)\src\core;$(MSBuildProjectDirectory)\src\event;$(MSBuildProjectDirectory)\src\event\modules;$(MSBuildProjectDirectory)\src\http;$(MSBuildProjectDirectory)\src\http\modules;$(MSBuildProjectDirectory)\src\http\modules\perl;$(MSBuildProjectDirectory)\src\mail;$(MSBuildProjectDirectory)\src\misc;$(MSBuildProjectDirectory)\src\mysql;$(MSBuildProjectDirectory)\src\os;$(MSBuildProjectDirectory)\src\os\win32;$(MSBuildProjectDirectory)\lib\openssl\ssl\include;$(MSBuildProjectDirectory)\lib\zlib;$(MSBuildProjectDirectory)\lib\pcre</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(MSBuildProjectDirectory)\objs;$(MSBuildProjectDirectory)\src\core;$(MSBuildProjectDirectory)\src\event;$(MSBuildProjectDirectory)\src\event\modules;$(MSBuildProjectDirectory)\src\http;$(MSBuildProjectDirectory)\src\http\modules;$(MSBuildProjectDirectory)\src\http\modules\perl;$(MSBuildProjectDirectory)\src\mail;$(MSBuildProjectDirectory)\src\misc;$(MSBuildProjectDirectory)\src\mysql;$(MSBuildProjectDirectory)\src\os;$(MSBuildProjectDirectory)\src\os\win32;$(MSBuildProjectDirectory)\lib\openssl\ssl\include;$(MSBuildProjectDirectory)\lib\zlib;$(MSBuildProjectDirectory)\lib\pcre</IncludePath>
+    <LibraryPath>$(MSBuildProjectDirectory)\lib\pcre\;$(MSBuildProjectDirectory)\objs\lib\zlib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath);$(MSBuildProjectDirectory)\config;$(MSBuildProjectDirectory)\src\core;$(MSBuildProjectDirectory)\src\event;$(MSBuildProjectDirectory)\src\event\modules;$(MSBuildProjectDirectory)\src\http;$(MSBuildProjectDirectory)\src\http\modules;$(MSBuildProjectDirectory)\src\http\modules\perl;$(MSBuildProjectDirectory)\src\mail;$(MSBuildProjectDirectory)\src\misc;$(MSBuildProjectDirectory)\src\mysql;$(MSBuildProjectDirectory)\src\os;$(MSBuildProjectDirectory)\src\os\win32;$(MSBuildProjectDirectory)\lib\openssl\ssl\include;$(MSBuildProjectDirectory)\lib\zlib;$(MSBuildProjectDirectory)\lib\pcre</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(MSBuildProjectDirectory)\objs;$(MSBuildProjectDirectory)\src\core;$(MSBuildProjectDirectory)\src\event;$(MSBuildProjectDirectory)\src\event\modules;$(MSBuildProjectDirectory)\src\http;$(MSBuildProjectDirectory)\src\http\modules;$(MSBuildProjectDirectory)\src\http\modules\perl;$(MSBuildProjectDirectory)\src\mail;$(MSBuildProjectDirectory)\src\misc;$(MSBuildProjectDirectory)\src\mysql;$(MSBuildProjectDirectory)\src\os;$(MSBuildProjectDirectory)\src\os\win32;$(MSBuildProjectDirectory)\lib\openssl\ssl\include;$(MSBuildProjectDirectory)\lib\zlib;$(MSBuildProjectDirectory)\lib\pcre</IncludePath>
+    <LibraryPath>$(MSBuildProjectDirectory)\lib\pcre\;$(MSBuildProjectDirectory)\objs\lib\zlib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);NGX_WIN32;NGX_MAIL_SSL;NO_SYS_TYPES_H;FD_SETSIZE=1024</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;pcre.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(MSBuildProjectDirectory)\lib\openssl\ssl\lib\;$(MSBuildProjectDirectory)\lib\pcre\;$(MSBuildProjectDirectory)\lib\zlib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);NGX_WIN32;NGX_MAIL_SSL;NO_SYS_TYPES_H;FD_SETSIZE=1024</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;pcre.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(MSBuildProjectDirectory)\lib\openssl\ssl\lib\;$(MSBuildProjectDirectory)\lib\pcre\;$(MSBuildProjectDirectory)\lib\zlib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
