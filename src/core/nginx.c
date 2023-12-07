@@ -203,13 +203,13 @@ main(int argc, char *const *argv)
     }
 
     /* TODO */ ngx_max_sockets = -1;
-
+    //初始化时间，把windows的FILETIME转换成UNINX的时间戳
     ngx_time_init();
 
 #if (NGX_PCRE)
     ngx_regex_init();
 #endif
-
+//获取当前进程号
     ngx_pid = ngx_getpid();
 
     log = ngx_log_init(ngx_prefix);
