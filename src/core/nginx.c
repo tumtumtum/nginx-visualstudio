@@ -218,6 +218,7 @@ main(int argc, char *const *argv)
     }
 
     /* STUB */
+    //在windows中并没有声明NGX_OPENSSL，#if语句会直接判断为假值。
 #if (NGX_OPENSSL)
     ngx_ssl_init(log);
 #endif
